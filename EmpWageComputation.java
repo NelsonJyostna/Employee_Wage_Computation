@@ -8,26 +8,33 @@ public class EmpWageComputation {
 
       // Computation
        double empcheck = Math.floor(Math.random( ) * 3);
-      if (IS_PART_TIME == empcheck)
-         {
-            int empHrs = 8;
-            int Salery=empHrs*EMP_RATE_PER_HR;
-            System.out.println("Salery :"+Salery);
-         }
-      else if (IS_FULL_TIME == empcheck)
-         {
-          int empHrs = 4;
-          int Salery=empHrs*EMP_RATE_PER_HR;
-          System.out.println("Salery :"+Salery);
-
-         }
-      else
-         {
-            int empHrs = 0;
-            int Salery=empHrs*EMP_RATE_PER_HR;
-            System.out.println("Salery :"+Salery);
-         }
-       //int Salery=empHrs*EMP_RATE_PER_HR;
-       //System.out.println("Salery :"+Salery);
+        switch ((int)empcheck)
+          {
+            case 1:
+             {
+              int empHrs = 8;
+                int Salery=empHrs*EMP_RATE_PER_HR;
+                System.out.println("Salery :"+Salery);
+              break;
+             }
+           case 2:
+             {
+              int empHrs = 4;
+              int Salery=empHrs*EMP_RATE_PER_HR;
+              System.out.println("Salery :"+Salery);
+             break;
+             }
+           default:
+            {
+             int empHrs = 0;
+             int Salery=empHrs*EMP_RATE_PER_HR;
+             System.out.println("Salery :"+Salery);
+            break;
+            }
+          }
+        //int Salery = empHrs * EMP_RATE_PER_HR;
+        //System.out.println("Salery :"+Salery);
     }
 }
+
+
